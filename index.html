@@ -2,14 +2,42 @@
 <html>
 <head>
     <title>Worldmap of OSINT tools</title>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YZ8MNPH3PR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa do Yandex</title>
+    <!-- Inclua a API do Yandex Maps -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=0b7047ce-5542-4dd0-95da-292cd3402169&lang=pt_BR" type="text/javascript"></script>
+    <style>
+        /* Estilo para o mapa */
+        #map {
+            width: 100%;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mapa do Yandex</h1>
+    <!-- Div onde o mapa será renderizado -->
+    <div id="map"></div>
 
-  gtag('config', 'G-YZ8MNPH3PR');
+    <script>
+        // Função de inicialização do mapa
+        function initMap() {
+            // Cria um mapa
+            var map = new ymaps.Map("map", {
+                center: [55.76, 37.64], // Coordenadas do centro do mapa
+                zoom: 10 // Nível de zoom inicial
+            });
+        }
+    </script>
+
+    <!-- Chamada para a função de inicialização do mapa -->
+    <script async defer src="https://api-maps.yandex.ru/2.1/?apikey=0b7047ce-5542-4dd0-95da-292cd3402169&lang=pt_BR&onload=initMap"></script>
+</body>
+</html>
 </script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
      <link rel="stylesheet" href="style.css">
